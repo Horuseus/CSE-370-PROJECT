@@ -29,7 +29,7 @@ As war rages on families need to leave their home to keep themselves safe. But m
 ### 6. 👥 Social Reading Feed A Twitter/X-style feed of your friends' reading activity — what they just started, finished, highlighted, or reviewed. React with reading emojis, save quotes they shared, or jump into a discussion instantly.
 
 
-#**<ins>Project idea 3</ins>**
+# **<ins>Project idea 3</ins>**
 ## **Rickshaw Ride Management System**
 ## **REASON FOR CREATING:**
 there has been maximum cases that there have been unfair fair to not only to passengers but also rickshaw pullers. In addition, there has been recent cases that a few rickshaw pullers gets bad intention towards passengers epecially women. thus the above problems can be resolved by this project.
