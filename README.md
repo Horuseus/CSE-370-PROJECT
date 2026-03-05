@@ -27,3 +27,21 @@ As war rages on families need to leave their home to keep themselves safe. But m
 ### 4. ✍️ Rich Review Editor Write reviews with spoiler-tagged sections, chapter timestamps, mood tags, and quote highlights pulled directly from your notes. Reviews can be liked, commented on, and shared.
 ### 5. 🔖 Smart Shelf System Beyond "Read / Want to Read / Reading" — users create custom shelves with rules (e.g. "Books under 300 pages I want to read this summer"). Shelves auto-update based on filters.
 ### 6. 👥 Social Reading Feed A Twitter/X-style feed of your friends' reading activity — what they just started, finished, highlighted, or reviewed. React with reading emojis, save quotes they shared, or jump into a discussion instantly.
+
+
+#**<ins>Project idea 3</ins>**
+## **Rickshaw Ride Management System**
+## **REASON FOR CREATING:**
+there has been maximum cases that there have been unfair fair to not only to passengers but also rickshaw pullers. In addition, there has been recent cases that a few rickshaw pullers gets bad intention towards passengers epecially women. thus the above problems can be resolved by this project.
+
+## **FEATURES**
+###  1. Track rides
+###  2.Fare calculation
+###  3.Rider reviews 
+###  4.Distance and passenger amount based pricing
+###  5.Payment Management
+###  6. Ride History
+###  7. Rickshaw Puller Earnings Report
+###  8. Availability System
+###  9. Ride Cancellation System
+###  10. Safety Features
