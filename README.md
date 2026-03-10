@@ -3,22 +3,27 @@ CSE 370 PROJECT FOR GROUP 7
 
 
 # **<ins>Project idea 1</ins>**
-## **SAFR - Shelter,Aid and Family reunification for refugees**
-### To help those in need to find a safer place and find their loved ones
+## **SAFR - Shelter, Aid and Family reunification for refugees**
+### To help those in need find a safer place and find their loved ones
 
 ## **AIM:**
-As war rages on families need to leave their home to keep themselves safe. But more than often they fail to find shelter or find where they have everything except what they actually need. So they keep moving but in the search of what they actually need. This problem can be resolved by this project.
+As war rages on, families need to leave their homes to keep themselves safe. But more than often they fail to find shelter or find where they have everything except what they actually need. So they keep moving but in search of what they actually need. This project can resolve this problem.
 
 ###  1. Refugee & Displacement Tracking System
+        Creates an id based on their fingerprint and keeps track of the refugees by where they are from, which camp they are in, and where they want to go. Takes blood group information, a photo, and names as stated in their passport, driving license, etc. This will help NGO's or government bodies to have a rough idea where it may be unsafe for refugees to go. This identification will be shared across borders and other refugee camps.
 ###  2.Emergency Medical Resource Management
+       Each refugee camp can track its own supplies of medical equipment. if they have a shortage, they can search other refugee camps to acquire emergency supplies. also they could notify others if they have a medical item in surplus.
 ###  3.Civilian Evacuation Transportation 
-###  4.Humanitarian Aid Distribution System
+      Civilians can request a transport system to be evacuated from an area. the evacuation transport will be considering minors, elders and chronically ill patients first. The system will notify the closest refugee camp to send a vehicle to the requested area.
+###  4. Humanitarian Aid Distribution System
+        NGO's can monitor which camp needs what and how much it needs. In that way they can streamline the aid distribution process and make it more efficient. That way ever camp can get what they need in time.
 ###  5.Crisis Volunteer & Skill Matching Platform
-###  6. Finding family members through Fingerprint or Identification papers
-
+      refugees/volunteers can be appointed to various works according to their speciality.
+###  6. Finding family members through fingerprints or Identification papers
+      Families can find their loved ones by providing their names and photos. Fingerprints can also be used if available.
 
 # **<ins>Project idea 2</ins>**
-## **Readify: Community Based Book Reviewing System**
+## **Readify: Community-Based Book Reviewing System**
 ### To help find a good read
 
 ### 1. 🏆 Reading Challenges & Gamification Set yearly, monthly, or custom reading goals and earn badges for hitting milestones — "50 Books in a Year", "Genre Explorer", "Speed Reader". Compete on leaderboards with friends or the global Readify community.
