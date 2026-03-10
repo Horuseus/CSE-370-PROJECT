@@ -1,5 +1,5 @@
 # CSE-370-PROJECT
-CSE 370 PROJECT FOR GROUP 7
+CSE 370 PROJECT FOR GROUP 6
 
 
 # **<ins>Project idea 1</ins>**
