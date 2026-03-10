@@ -50,3 +50,12 @@ there has been maximum cases that there have been unfair fair to not only to pas
 ###  8. Availability System
 ###  9. Ride Cancellation System
 ###  10. Safety Features
+
+
+
+
+| FRAMEWORKS    | Language      |
+| ------------- | ------------- |
+| DATABASE      | MYSQL         |
+| FRONTEND      | REACT.js      |
+| BACKEND       | NODE.js       |
