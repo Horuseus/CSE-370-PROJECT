@@ -10,7 +10,7 @@ CSE 370 PROJECT FOR GROUP 6
 As war rages on, families need to leave their homes to keep themselves safe. But more than often they fail to find shelter or find where they have everything except what they actually need. So they keep moving but in search of what they actually need. This project can resolve this problem.
 
 ###  1. Refugee & Displacement Tracking System
- Creates an id based on their fingerprint and keeps track of the refugees by where they are from, which camp they are in, and where they want to go. Takes blood group information, a photo, and names as stated in their passport, driving license, etc. This will help NGO's or government bodies to have a rough idea where it may be unsafe for refugees to go. This identification will be shared across borders and other refugee camps.
+ Creates an id based on a unique id (based on a distinct refugee camp number, date, time of day and refugee number) and keeps track of the refugees by where they are from, which camp they are in, and where they want to go. Takes blood group information, a photo, and names as stated in their passport, driving license, etc. This will help NGO's or government bodies to have a rough idea where it may be unsafe for refugees to go. This identification will be shared across borders and other refugee camps.
 ###  2.Emergency Medical Resource Management
  Each refugee camp can track its own supplies of medical equipment. If they have a shortage, they can search other refugee camps to acquire emergency supplies. also they could notify others if they have a medical item in surplus.
 ###  3.Civilian Evacuation Transportation 
