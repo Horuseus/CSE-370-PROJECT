@@ -18,7 +18,7 @@ As war rages on, families need to leave their homes to keep themselves safe. But
 ###  4. Humanitarian Aid Distribution System
  NGO's can monitor which camp needs what and how much it needs. In that way, they can streamline the aid distribution process and make it more efficient. That way ever camp can get what they need in time.
 ###  5.Crisis Volunteer & Skill Matching Platform
- Refugees/volunteers can be appointed to various works according to their speciality.
+ volunteers can be appointed to various works according to their speciality.
 ###  6. Finding family members through fingerprints or Identification papers
  Families can find their loved ones by providing their names and photos. Fingerprints can also be used if available. As all refugees have an SAFR ID itll be easier to identify and reunite them.
 
