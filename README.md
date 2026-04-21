@@ -11,7 +11,7 @@ As war rages on, families need to leave their homes to keep themselves safe. But
 
 ###  1. Refugee & Displacement Tracking System
  Creates an id based on a unique id (based on a distinct refugee camp number, date, time of day and refugee number) and keeps track of the refugees by where they are from, which camp they are in, and where they want to go. Takes blood group information, a photo, and names as stated in their passport, driving license, etc. This will help NGO's or government bodies to have a rough idea where it may be unsafe for refugees to go. This identification will be shared across borders and other refugee camps.
-###  2.Emergency Medical Resource Management
+###  2.Medical Resource Management
  Each refugee camp can track its own supplies of medical equipment. If they have a shortage, they can search other refugee camps to acquire emergency supplies. also they could notify others if they have a medical item in surplus.
 ###  3.Civilian Evacuation Transportation 
  Civilians can request a transport system to be evacuated from an area. The evacuation transport will be considering minors, elders and chronically ill patients first. The system will notify the closest refugee camp to send a vehicle to the requested area. It can also be used to move refugees from one camp to another if needed.
