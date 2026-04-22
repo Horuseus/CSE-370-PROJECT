@@ -1,0 +1,198 @@
+CREATE TABLE Refugee( 
+    Safr_id          VARCHAR(20)  PRIMARY KEY, 
+    Full_name        VARCHAR(100) NOT NULL, 
+    Date_of_Birth    DATE, 
+    Blood_Group      VARCHAR(5), 
+    Photo            VARCHAR(255), 
+    Origin_location  VARCHAR(100), 
+    Country          VARCHAR(50), 
+    City             VARCHAR(50), 
+    Reg_date         DATE 
+); 
+ 
+CREATE TABLE Volunteer ( 
+    Volunteer_id  VARCHAR(20)  PRIMARY KEY, 
+    Name          VARCHAR(100) NOT NULL, 
+    Email         VARCHAR(100), 
+    Phone         VARCHAR(20), 
+    Home_Country  VARCHAR(50) 
+); 
+ 
+CREATE TABLE Donor ( 
+    Name            VARCHAR(100) PRIMARY KEY, 
+    Phone           VARCHAR(20), 
+    Email           VARCHAR(100), 
+    Payment_Method  VARCHAR(50), 
+    Total_Amount    DECIMAL(12,2), 
+    Donation_type   VARCHAR(50), 
+    Donor_type      VARCHAR(20)       
+); 
+ 
+CREATE TABLE NGO ( 
+    NGO_name        VARCHAR(100) PRIMARY KEY, 
+    Contact_Email   VARCHAR(100), 
+    Manager_name    VARCHAR(100), 
+    Operating_Areas VARCHAR(100), 
+    Camp_id         VARCHAR(20) UNIQUE, 
+    Item_req   VARCHAR(40), 
+  Item_quantity INT    
+); 
+ 
+CREATE TABLE Camp ( 
+    Camp_id   VARCHAR(20)  PRIMARY KEY, 
+    Location  VARCHAR(100) NOT NULL, 
+    Capacity  INT, 
+    Volunteer_id VARCHAR(20), 
+    Evareq_id    VARCHAR(20), 
+    FOREIGN KEY (Volunteer_id) REFERENCES Volunteer(Volunteer_id) 
+); 
+ 
+ALTER TABLE NGO 
+    ADD CONSTRAINT fk_ngo_camp 
+    FOREIGN KEY (Camp_id) REFERENCES Camp(Camp_id); 
+ 
+CREATE TABLE Aid ( 
+    Item_name  VARCHAR(100), 
+    Category   VARCHAR(50), 
+    Unit       INT, 
+    Camp_id    VARCHAR(20),            
+    NGO_name   VARCHAR(100),           
+    PRIMARY KEY (Item_name, Camp_id, NGO_name), 
+    FOREIGN KEY (Camp_id)  REFERENCES Camp(Camp_id), 
+    FOREIGN KEY (NGO_name) REFERENCES NGO(NGO_name) 
+); 
+ 
+CREATE TABLE Camp_Medical_Inventory ( 
+    Inventory_id  VARCHAR(20)  PRIMARY KEY, 
+    Item_name     VARCHAR(100) NOT NULL, 
+    Quantity      INT, 
+    Last_updated  DATE, 
+    Camp_id       VARCHAR(20),  
+    FOREIGN KEY (Camp_id) REFERENCES Camp(Camp_id) 
+); 
+ 
+CREATE TABLE Vehicle ( 
+    Vehicle_id       VARCHAR(20)  PRIMARY KEY, 
+    Vehicle_type     VARCHAR(50), 
+    Capacity         INT, 
+    Operating_Areas  VARCHAR(100), 
+    Camp_id          VARCHAR(20),  
+    FOREIGN KEY (Camp_id) REFERENCES Camp(Camp_id) 
+); 
+ 
+ CREATE TABLE Evac_Request ( 
+    Evareq_id      VARCHAR(20)  PRIMARY KEY, 
+    Status         VARCHAR(30), 
+    Priority       VARCHAR(20), 
+    Request_date   DATE, 
+    Allocation_date DATE, 
+    Vehicle_id     VARCHAR(20),  
+    Safr_id        VARCHAR(20), 
+    operating_areas VARCHAR(100), 
+    FOREIGN KEY (Vehicle_id) REFERENCES Vehicle(Vehicle_id), 
+    FOREIGN KEY (Safr_id)    REFERENCES Refugee(Safr_id) 
+); 
+ 
+ALTER TABLE Camp 
+    ADD CONSTRAINT fk_camp_evareq 
+    FOREIGN KEY (Evareq_id) REFERENCES Evac_Request(Evareq_id); 
+ 
+CREATE TABLE Match_details ( 
+    Safr_id        VARCHAR(20)  PRIMARY KEY, 
+    Camp_location  VARCHAR(100), 
+    FOREIGN KEY (Safr_id) REFERENCES Refugee(Safr_id) 
+); 
+ 
+CREATE TABLE Identity_Doc ( 
+    Safr_id     VARCHAR(20), 
+    Doc_number  VARCHAR(50), 
+    Doc_type    VARCHAR(50), 
+    PRIMARY KEY (Safr_id, Doc_number), 
+    FOREIGN KEY (Safr_id) REFERENCES Refugee(Safr_id) 
+); 
+ 
+CREATE TABLE Search_Req ( 
+    Safr_id        VARCHAR(20), 
+    Status         VARCHAR(30), 
+    Missing_Name   VARCHAR(100), 
+    Missing_photo  VARCHAR(255), 
+    Doc_number     VARCHAR(50), 
+    Match_Safr_id  VARCHAR(20), 
+    PRIMARY KEY (Safr_id),                  
+    FOREIGN KEY (Safr_id) REFERENCES Refugee(Safr_id), 
+    FOREIGN KEY (Safr_id, Doc_number) 
+    REFERENCES Identity_Doc(Safr_id, Doc_number), 
+    FOREIGN KEY (Match_Safr_id) REFERENCES Match_details(Safr_id) 
+); 
+ 
+CREATE TABLE Assignment ( 
+    Assignment_ID   VARCHAR(20), 
+    Volunteer_id    VARCHAR(20), 
+    Skill_name      VARCHAR(100), 
+    Assigned_Date   DATE, 
+    Outcome         VARCHAR(255), 
+    Camp_id         VARCHAR(20),                
+    PRIMARY KEY (Assignment_ID, Volunteer_id),   
+    FOREIGN KEY (Volunteer_id) REFERENCES Volunteer(Volunteer_id), 
+    FOREIGN KEY (Camp_id)      REFERENCES Camp(Camp_id) 
+); 
+ 
+CREATE TABLE NGO_Inventory ( 
+    NGO_name   VARCHAR(100), 
+    Item_name  VARCHAR(100), 
+    Category   VARCHAR(50), 
+    Unit       INTEGER, 
+    PRIMARY KEY (NGO_name, Item_name), 
+    FOREIGN KEY (NGO_name) REFERENCES NGO(NGO_name) 
+); 
+ 
+CREATE TABLE Donor_NGO ( 
+    NGO_name    VARCHAR(100), 
+    Donor_Name  VARCHAR(100), 
+    PRIMARY KEY (NGO_name, Donor_Name), 
+    FOREIGN KEY (NGO_name)   REFERENCES NGO(NGO_name), 
+    FOREIGN KEY (Donor_Name) REFERENCES Donor(Name) 
+); 
+ 
+CREATE TABLE Refugee_Has_Requested_Vehicle ( 
+    Safr_id           VARCHAR(20), 
+    Vehicle_id        VARCHAR(20), 
+    Destination_camp  VARCHAR(20), 
+    PRIMARY KEY (Safr_id, Vehicle_id), 
+    FOREIGN KEY (Safr_id)      REFERENCES Refugee(Safr_id), 
+    FOREIGN KEY (Vehicle_id)   REFERENCES Vehicle(Vehicle_id), 
+    FOREIGN KEY (Destination_camp) REFERENCES Camp(Camp_id) 
+); 
+ 
+CREATE TABLE Refugee_Stay_in_Camp ( 
+    Safr_id         VARCHAR(20), 
+    Camp_id         VARCHAR(20), 
+    Arrival_date    DATE, 
+    Departure_date  DATE, 
+    PRIMARY KEY (Safr_id, Camp_id), 
+    FOREIGN KEY (Safr_id)  REFERENCES Refugee(Safr_id), 
+    FOREIGN KEY (Camp_id)  REFERENCES Camp(Camp_id) 
+); 
+ 
+CREATE TABLE Camp_Request ( 
+    Camp_id         VARCHAR(20), 
+    NGO_name        VARCHAR(100), 
+    Item_Requested  VARCHAR(100), 
+    Item_quantity   INT, 
+    PRIMARY KEY (Camp_id, NGO_name), 
+    FOREIGN KEY (Camp_id)  REFERENCES Camp(Camp_id), 
+    FOREIGN KEY (NGO_name) REFERENCES NGO(NGO_name) 
+); 
+ 
+CREATE TABLE camp_medical_inventory_ASKS_FOR ( 
+    Requesting_Inventory_id  VARCHAR(20), 
+    Requested_Inventory_id   VARCHAR(20), 
+    Item_needed              VARCHAR(100), 
+    Units                    INTEGER, 
+    Status                   VARCHAR(30), 
+    PRIMARY KEY (Requesting_Inventory_id, Requested_Inventory_id), 
+    FOREIGN KEY (Requesting_Inventory_id) 
+    REFERENCES Camp_Medical_Inventory(Inventory_id), 
+    FOREIGN KEY (Requested_Inventory_id) 
+    REFERENCES Camp_Medical_Inventory(Inventory_id) 
+); 
