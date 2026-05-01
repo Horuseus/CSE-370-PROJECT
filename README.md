@@ -20,7 +20,7 @@ As war rages on, families need to leave their homes to keep themselves safe. But
 ###  5.Crisis Volunteer & Skill Matching Platform
  volunteers can be appointed to various works according to their speciality.
 ###  6. Finding family members through fingerprints or Identification papers
- Families can find their loved ones by providing their names and photos. Fingerprints can also be used if available. As all refugees have an SAFR ID itll be easier to identify and reunite them.
+ Families can find their loved ones by providing their names. As all refugees have an SAFR ID itll be easier to identify and reunite them.
 
  ### 7. Donations
   Users can donate any amount of money they need. They can be one time donors and regular donors.
