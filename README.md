@@ -14,15 +14,18 @@ As war rages on, families need to leave their homes to keep themselves safe. But
 ###  2.Medical Resource Management
  Each refugee camp can track its own supplies of medical equipment. If they have a shortage, they can search other refugee camps to acquire emergency supplies. also they could notify others if they have a medical item in surplus.
 ###  3.Civilian Evacuation Transportation 
- Civilians can request a transport system to be evacuated from an area. The evacuation transport will be considering minors, elders and chronically ill patients first. The system will notify the closest refugee camp to send a vehicle to the requested area. It can also be used to move refugees from one camp to another if needed.
-###  4. Humanitarian Aid Distribution System
+ Civilians can request to be evacuated from an area. The evacuation will be considering minors, elders and chronically ill patients first. The system will notify the closest refugee camp to send a rescue team to the requested area.
+
+### 4.Changing Camps
+ Refugees can change their camp as they please. This changing camp data can be easily be seen by refugees or those who are searching for them
+###  5. Humanitarian Aid Distribution System
  NGO's can monitor which camp needs what and how much it needs. In that way, they can streamline the aid distribution process and make it more efficient. That way ever camp can get what they need in time.
-###  5.Crisis Volunteer & Skill Matching Platform
+###  6.Crisis Volunteer & Skill Matching Platform
  volunteers can be appointed to various works according to their speciality.
-###  6. Finding family members through fingerprints or Identification papers
+###  7. Finding family members through fingerprints or Identification papers
  Families can find their loved ones by providing their names. As all refugees have an SAFR ID itll be easier to identify and reunite them.
 
- ### 7. Donations
+ ### 8. Donations
   Users can donate any amount of money they need. They can be one time donors and regular donors.
  
 
