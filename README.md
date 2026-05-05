@@ -32,5 +32,5 @@ As war rages on, families need to leave their homes to keep themselves safe. But
 | FRAMEWORKS    | Language      |
 | ------------- | ------------- |
 | DATABASE      | MYSQL         |
-| FRONTEND      | REACT.js      |
-| BACKEND       | NODE.js       |
+| FRONTEND      | HTML,CSS      |
+| BACKEND       | PHP           |
