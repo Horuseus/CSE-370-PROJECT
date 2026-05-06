@@ -1,0 +1,212 @@
+/*
+ * SAFR Shared Stylesheet
+ * Applied to all pages site-wide for consistent look and feel.
+ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Georgia, serif;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* ── Top Bar ── */
+.safr-topbar {
+    background: #111d2b;
+    color: white;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.safr-topbar .brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e07b4a;
+    text-decoration: none;
+}
+.safr-topbar .topbar-right {
+    font-size: 13px;
+    color: #a8d8f0;
+}
+.safr-topbar .topbar-right a {
+    color: #a8d8f0;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+/* ── Nav Bar ── */
+.safr-nav {
+    background: #224a73;
+    padding: 10px 30px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.safr-nav a {
+    color: #cce5ff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+.safr-nav a.active {
+    background: #1a6fb5;
+    color: white;
+}
+
+/* ── Main Container ── */
+.safr-container {
+    max-width: 800px;
+    margin: 36px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #c8d8e8;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.safr-container.wide {
+    max-width: 1000px;
+}
+
+/* ── Headings ── */
+.safr-container h2 {
+    color: #1a3a5c;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0eaf4;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.safr-container h3 {
+    color: #1a3a5c;
+    margin: 20px 0 10px;
+    font-size: 16px;
+}
+
+/* ── Messages ── */
+.safr-msg {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.safr-msg.success { background: #d4edda; color: #155724; border: 1px solid #b8dfc4; }
+.safr-msg.error   { background: #f8d7da; color: #721c24; border: 1px solid #f0b8bc; }
+
+/* ── Forms ── */
+.safr-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+.safr-container input[type="text"],
+.safr-container input[type="password"],
+.safr-container input[type="email"],
+.safr-container input[type="number"],
+.safr-container input[type="date"],
+.safr-container select,
+.safr-container textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    background: #fff;
+}
+.safr-container input:focus,
+.safr-container select:focus,
+.safr-container textarea:focus {
+    outline: none;
+    border-color: #1a6fb5;
+}
+.safr-container input[readonly] {
+    background: #f5f5f5;
+    color: #666;
+}
+
+/* ── Buttons ── */
+.safr-btn {
+    background: #1a6fb5;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    display: inline-block;
+}
+.safr-btn-full {
+    width: 100%;
+    padding: 11px;
+    font-size: 15px;
+}
+.safr-btn:hover { background: #124e82; }
+
+/* ── Data Table ── */
+.safr-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.safr-table th {
+    background: #1a3a5c;
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+}
+.safr-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #e0eaf4;
+    color: #333;
+}
+.safr-table tr:nth-child(even) td { background: #f7fafd; }
+
+/* ── Info / Profile Card ── */
+.safr-info-box {
+    background: #eef5fc;
+    border: 1px solid #c0d8ee;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+}
+.safr-info-box p {
+    margin: 7px 0;
+    font-size: 14px;
+    color: #1a3a5c;
+}
+.safr-info-box strong {
+    display: inline-block;
+    width: 160px;
+    color: #555;
+}
+
+/* ── Status badges ── */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.badge-pending  { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+.badge-accepted { background: #d4edda; color: #155724; border: 1px solid #b8dfc4; }
+
+/* ── Section spacing ── */
+.safr-section {
+    margin-bottom: 30px;
+}
+
+/* ── Utility ── */
+.note { text-align: center; margin-top: 14px; font-size: 13px; color: #666; }
+.note a { color: #1a6fb5; text-decoration: none; }

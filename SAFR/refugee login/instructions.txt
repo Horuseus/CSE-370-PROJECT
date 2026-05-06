@@ -1,0 +1,2 @@
+log in: login.php => signin.php
+sign in: add_refugee => insert_refugee => add_pass => save_pass => login.php
